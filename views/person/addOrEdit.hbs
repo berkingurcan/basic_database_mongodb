@@ -1,0 +1,24 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/person" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value = "{{person._id}}">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name = "fullName" placeholder="name" value = "{{person.fullName}}">
+    </div>
+
+    <div class="form-group">
+        <label>E-Mail </label>
+        <input type="text" class="form-control" name = "email" placeholder="e-mail address" value = "{{person.email}}">
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" name = "password" placeholder="password" value = "{{person.password}}">
+    </div>
+
+    <div class="form-group">
+        <a class="btn btn-secondary" href="/person/list">VIEW DATA</a>
+        <button type="submit" class="btn btn-primary" style="color: azure;">SUBMIT</button>
+    </div>
+</form>

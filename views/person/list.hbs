@@ -1,0 +1,27 @@
+<h3><a class="btn btn-secondary" href="/person">CREATE NEW PERSON</a></h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>E-mail</th>
+            <th>Password</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.fullName}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.password}}</td>
+            <td>
+                <a href = "/person/{{this._id}}" class="btn btn-success">EDIT</a>
+                <a href = "/person/delete/{{this._id}}" class="btn btn-danger">DELETE</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+</table>
